@@ -28,7 +28,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/angular-app   
+          path: dist/angular-app/browser   
 
   deploy:
     needs: build
