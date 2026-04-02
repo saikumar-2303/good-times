@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.box {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border: 2px solid #ccc;
+  margin: 20px auto;
+  overflow: hidden; /* 👈 prevents overflow */
+}
+
+button {
+  position: absolute; /* 👈 required */
+  transition: all 0.2s ease;
+  padding: 10px 20px;
+}

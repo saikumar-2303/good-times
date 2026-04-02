@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>{{ message }}</h2>
+
+  <div class="box">
+    <button
+      *ngIf="booleanValue"
+      (mouseenter)="moveButton()"
+      (click)="changeMessage()"
+      [style.left.px]="x"
+      [style.top.px]="y">
+       Dont Click Me
+    </button>
+    
+  </div>
+</div>

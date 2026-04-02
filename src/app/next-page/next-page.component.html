@@ -1,0 +1,38 @@
+<div class="container">
+
+  <p *ngIf="!isEnabled">Don't click the Links sent by Others</p>
+
+  <div class="box" *ngIf="isEnabled">
+
+    <h3>You do know me, right? 🤔</h3>
+
+    <button (click)="yesClicked()" [disabled]="isLocked">
+      Yes ✅
+    </button>
+
+    <button
+      class="no-btn"
+      [ngClass]="{ 'moving': isMoving }"
+      (mouseover)="moveNoButton()"
+      [style.left.px]="isMoving ? noX : null"
+      [style.top.px]="isMoving ? noY : null"
+      [disabled]="isLocked">
+      No ❌
+    </button>
+
+    <p *ngIf="message">{{ message }}</p>
+
+    <!-- 🔵 WINDOWS SHUTDOWN SCREEN -->
+    <div *ngIf="showGlitch" class="shutdown-screen">
+      <div class="shutdown-content">
+        <div class="spinner"></div>
+        <h1>Shutting down</h1>
+        <p>Please wait...</p>
+      </div>
+    </div>
+
+    <!-- 🎉 FINAL -->
+    <h2 *ngIf="showFinal">April Fool 😈</h2>
+
+  </div>
+</div>
