@@ -5,8 +5,8 @@
 
 .box {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 100vh;
+  height: 100vh;
   border: 2px solid #ccc;
   margin: 20px auto;
   overflow: hidden; /* 👈 prevents overflow */
