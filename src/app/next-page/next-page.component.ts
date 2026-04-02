@@ -67,8 +67,8 @@ export class NextPageComponent implements OnInit {
       setTimeout(() => {
         this.showGlitch = false;
         this.showFinal = true;
-      }, 6000);
+      }, 10000);
 
-    }, 2000);
+    }, 5000);
   }
 }
