@@ -19,16 +19,16 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20   
 
       - name: Install & Build
         run: |
-          npm install
+          npm ci
           npm run build -- --base-href=/${{ github.event.repository.name }}/
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/angular-prank/browser   
+          path: dist/angular-prank/browser
 
   deploy:
     needs: build
